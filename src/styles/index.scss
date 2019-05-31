@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 html, body {
     height: 100%;
     width: 100%;
@@ -33,6 +35,10 @@ button{
     }
 }
 
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
 .topnav {
     color: #d9b81e;
     width: 100vw;
@@ -40,7 +46,9 @@ button{
     background-color: #000;
     border-bottom: white solid 1px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,14 +59,118 @@ button{
     }
 }
 
+.footer {
+    color: white;
+    background-color: black;
+    width: 100vw;
+    height: 80px;
+    background-color: #000;
+    border-bottom: white solid 1px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    * {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    background: url('../assets/footerbg.png') no-repeat center center scroll;
+}
+.hero{
+    max-width: 600px;
+    width: 75vw;
+}
 .top-section {
-    height: 750px;
+    height: 720px;
+    width: 100vw;
     background: url('../assets/Field.png') no-repeat center center fixed;
     img {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 }
 
+.quotes-section {
+    padding-top:6rem;
+    min-height: 700px;
+    width: 100vw;
+    background: url('../assets/bgthird.png') no-repeat center center scroll;
+    img {
+        padding-top: 4rem;
+    }
+    .sectiontwo {
+        padding-top: 15rem;
+
+    }
+    h1 {
+        color:#636363;
+        font-weight: 300;
+    }
+    h2 {
+        color:white;
+        font-weight: 300;
+    }
+}
+
+.magazine{
+    padding-top: 5rem;
+    h1 {
+        font-weight: 300;
+    }
+    p{
+        padding-top: 1rem;
+        font-weight: 400;
+    }
+}
+
+.fillfillment {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    img{
+        max-width: 700px;
+    }
+}
+.ferriswheel {
+    width: 100vw;
+    height: 500px;
+    background: url('../assets/ferriswheel.png') no-repeat center center fixed;
+
+}
+
+.hello-cali {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    h1 {
+        color: #f89b1c;
+    }
+    p {
+        color: #b64e33;
+    }
+}
+
+.signup {
+    min-width: 410px;
+    border: black solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .signupform{
+        input{
+            background: lightgrey;
+            border: gray solid 1px;
+        }
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        * {
+            padding: 0.5rem;
+        }
+}
+}
 .splash {
     position: relative;
     display: flex;

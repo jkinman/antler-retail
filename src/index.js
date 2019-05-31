@@ -1,15 +1,9 @@
-
-require('normalize.css/normalize.css');
 require('./styles/index.scss');
 
-document.addEventListener("DOMContentLoaded", () => {
+import PopperJs from 'popper.js';
+import jquery from 'jquery';
 
-    const pluginsTriggerElement = document.getElementById('plugins-trigger');
-    const pluginsElement = document.getElementById('plugins');
 
-    const pluginsVisibleClass = "splash-overview-plugins__list--visible";
-
-    pluginsTriggerElement.onclick = () => {
-        pluginsElement.classList.toggle(pluginsVisibleClass);
-    }
+jquery(()=>{
+    console.log('Hello jQuery + bootstrap 4!');
 });
