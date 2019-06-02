@@ -10,8 +10,8 @@
     <!-- Open Graph data -->
     <meta property="og:title" content="Antler Retail" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://lifenautjoe.github.io/webpack-starter-basic/" />
-    <meta property="og:image" content="https://i.snag.gy/i3eMBc.jpg" />
+    <meta property="og:url" content="https://antlerretail.com/" />
+    <meta property="og:image" content="https://antlerretail.com/wp-content/uploads/2018/05/antler_black_2.png" />
     <meta property="og:description" content="A simple webpack starter project for your basic web development needs." />
     <!-- Mobile header color for Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="{{mobileHeaderColor}}">
@@ -45,8 +45,8 @@
             <p class="lead">AS SEEN IN PALM SPRINGS LIFE MAGAZINE & HIGH TIMES ONLINE</p>
         </div>
         <div class="quotes-section">
-            <div class="row">
-                <div class="col-sm-12 col-md-8 offset-md-2">
+            <!-- <div class="row"> -->
+                <div class="col-sm-12 offset-sm-0 col-md-8 offset-md-2">
                         <h1>“This concept is long overdude! Congrats Antler, you guys really nailed it!"</h1>
                         <div class="sectiontwo">
                             <h2>“When it arrives it’s like a whole spectacle honestly.”</h2>
@@ -55,29 +55,29 @@
                             <h2>“We ordered the BIG BOX OMG what a weekend!”</h2>
                         </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
         <div class="fillfillment content-section">
             <img  class="mid hero" src="<%= require('./src/assets/fulfilment.png' ) %>" />
         </div>
         <div class="ferriswheel content-section"> </div>
         <div class="hello-cali content-section">
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div class="col-sm-12 offset-sm-0 col-md-8 offset-md-2">
                     <h1>WELL HELLO THERE CALIFORNIA!</h1>
                     <p class="lead">“We started this journey with the same goals that we had from day one. Create the World’s finest Cannabis Party Boxes ever made and impress everyone who orders them. Antler’s Ready Retail Model is designed to take the hassle out of deciding what to buy and also the daunting task of physically going to the shop and getting it. And we have certainly turned it up - way up! How about morning coffee, sunglasses, comfy slippers & hilarious pool toys! Don’t worry, we won’t spoil all the surprises. So why not let Antler bring our kind of party to your next event - You’re gonna love it.</p>
                 </div>
-            </div>
-            <div class="row">
+            <!-- </div> -->
+            <!-- <div class="row"> -->
                 <div class="col-sm-12 offset-md-0 col-md-6 offset-md-3">
                 <div class="signup">
                 <img  width="180" class="" src="<%= require('./src/assets/signuppic.png' ) %>" />
                 <div class="signupform">
-                    <img  width="190" class="sweet"  src="<%= require('./src/assets/sweet.png' ) %>" />
-                    <input type="text" class="signup-input" />
-                    <img width="190" class="" src="<%= require('./src/assets/signupbutton.png' ) %>" />
+                    <img  width="180" class="sweet"  src="<%= require('./src/assets/sweet.png' ) %>" />
+                    <input type="text" class="signup-input" id="email_field" />
+                    <img onclick="submitEmail()" width="180" class="" src="<%= require('./src/assets/signupbutton.png' ) %>" />
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </div>
@@ -92,7 +92,26 @@
                 <img  width="70" src="<%= require('./src/assets/dlabs.png' ) %>" />
                 <img  width="100" src="<%= require('./src/assets/antlersm.png' ) %>" />
             </div>
-        
+            <script type = "text/javascript">
+
+                function submitEmail() {
+                 let email = document.getElementById('email_field').value
+                 let data = {
+                   "email_address" : email,
+                   "status": "subscribed",
+                     "status_if_new": "subscribed"
+                     }
+
+                 // let headers = new Headers()
+                 // headers.set('Authorization', 'Basic amtpbm1hbjo1N2MxYWM0NTNkYzAwZjkxNDRmZDU1NzRkNDRhY2ZhMi11czIw');
+                 console.log(email)
+                 fetch( './sendemail.php?email='+email )
+                   document.getElementById('email_field').value = ""
+
+
+                }
+
+          </script>             
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101423651-2"></script>

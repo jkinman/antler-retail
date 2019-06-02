@@ -63,7 +63,7 @@ button{
     color: white;
     background-color: black;
     width: 100vw;
-    height: 80px;
+    min-height: 80px;
     background-color: #000;
     border-bottom: white solid 1px;
     text-align: center;
@@ -74,11 +74,22 @@ button{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
     * {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
+    
     background: url('../assets/footerbg.png') no-repeat center center scroll;
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        flex-direction: column;
+        // height: 200px;
+        padding: 0;
+        background: black;
+    }
+
 }
 .hero{
     max-width: 600px;
@@ -87,7 +98,21 @@ button{
 .top-section {
     height: 720px;
     width: 100vw;
-    background: url('../assets/Field.png') no-repeat center center fixed;
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: url('../assets/field-sm.png');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        background-attachment: scroll;
+        height: 420px;
+    }
+
     img {
         padding-top: 4rem;
     }
@@ -97,12 +122,19 @@ button{
     padding-top:6rem;
     min-height: 700px;
     width: 100vw;
+    height: 100%;
     background: url('../assets/bgthird.png') no-repeat center center scroll;
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        height: 100%;
+    }
+
     img {
         padding-top: 4rem;
     }
     .sectiontwo {
-        padding-top: 15rem;
+        // padding-top: 15rem;
 
     }
     h1 {
@@ -130,13 +162,35 @@ button{
     padding-top: 4rem;
     padding-bottom: 4rem;
     img{
-        max-width: 700px;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        }
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        background-attachment: scroll;
+        height: 420px;
     }
 }
 .ferriswheel {
     width: 100vw;
     height: 500px;
-    background: url('../assets/ferriswheel.png') no-repeat center center fixed;
+
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: url('../assets/ferriswheel-sm.png');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        background-attachment: scroll;
+        height: 300px;
+}
+
 
 }
 
@@ -152,11 +206,18 @@ button{
 }
 
 .signup {
-    min-width: 410px;
+    min-width: 375px;
     border: black solid 2px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
+    @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-height : 896px) {
+        flex-direction: column;
+        min-width: 300px;    
+    }
+        justify-content: center;
     align-items: center;
     .signupform{
         input{
@@ -169,133 +230,16 @@ button{
         * {
             padding: 0.5rem;
         }
-}
-}
-.splash {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-    .splash__content {
-        position: relative;
-        top: 5%;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding:0.5rem 1rem;
-        max-width: 480px;
     }
 
-        .splash-title {
-            margin-bottom: 1rem;
-            max-width: 200px;
-            height: auto;
-        }
+}
 
-            .splash-title__img{
-                height: auto;
-                width: 100%;
-                color: white;
-                margin: 0;
-                padding:0.5rem 1rem;
-            }
-
-
-        .splash-overview{
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 12px 0 rgba(0,0,0,0.1), 0 10px 25px 0 rgba(0,0,0,0.2);
-            margin-bottom: 4rem;
-        }
-
-            .splash-overview-footer{
-                padding: 2rem;
-                background-color: white;
-                font-size: 80%;
-            }
-
-            .splash-overview__heading{
-                font-size: 150%;
-                padding:1.5rem;
-                margin:0;
-            }
-
-            .splash-overview__star{
-                margin-bottom: 2rem;
-            }
-
-            .splash-overview__details{
-                background-color: #323bff;
-                color: white;
-                padding:2rem;
-            }
-
-                .splash-overview-plugins{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 2rem;
-                    background-color: rgba(0,0,0,0.4);
-                    padding:1rem;
-                }
-
-                    .splash-overview-plugins__list{
-                        text-align: center;
-                        margin:0;
-                        padding: 0;
-                        list-style: none;
-                        padding-top: 1.4rem;
-                        transition: all 1s ease-out;
-                        display: none;
-                        &--visible{
-                            display: block;
-                        }
-                    }
-
-                        .splash-overview-plugins__item{
-                            margin-bottom: 1rem;
-                        }
-
-                .splash-overview__conclusion{
-                    background-color: #ff4970;
-                    color: white;
-                    padding:2rem;
-                }
-
-                .splash-overview-start{
-                    font-size: 80%;
-                    background-color: #022b36;
-                    color: #c6c6c6;
-                    padding:2rem;
-                    text-align: left;
-                }
-
-                    .splash-overview-start__command{
-                        margin-bottom: 0.3rem;
-                        &:before {
-                            content: '$';
-                            font-weight: bold;
-                            margin-right: 0.2rem;
-                        }
-                    }
-
-                    .splash-overview-start__comment{
-                        color: #A3A3A3;
-                    }
-
-                .splash-overview-issues{
-                    background-color: #fd8c68;
-                    color: white;
-                    padding:2rem;
-                }
-
+    /* iphone 6, 6s, 7, 8 */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { }
+    /* iphone 6+, 6s+, 7+, 8+ */
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) { }
+    /* iphone X */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 828px) and (-webkit-device-pixel-ratio: 3) { }
 
 * { box-sizing: border-box; }
 .video-background {
