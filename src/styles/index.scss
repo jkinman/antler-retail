@@ -81,6 +81,7 @@ button{
     }
     
     background: url('../assets/footerbg.png') no-repeat center center scroll;
+    background-size: cover;
     @media only screen 
     and (min-device-width : 375px) 
     and (max-device-height : 896px) {
@@ -97,7 +98,7 @@ button{
 }
 .top-section {
     min-height: 900px;
-    height: 900px;
+    // height: 900px;
     width: 100vw;
     background-attachment: fixed;
     background-clip: border-box;
@@ -183,7 +184,7 @@ button{
 }
 .ferriswheel {
     width: 100vw;
-    height: 500px;
+    height: 40vh;
 
     background-attachment: fixed;
     background-clip: border-box;
