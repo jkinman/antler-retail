@@ -165,7 +165,8 @@ button{
     padding-top: 8rem;
     padding-bottom: 5rem;
     h1 {
-        font-weight: 300;
+        font-weight: 400;
+        font-size: 50px;
     }
     p{
         padding-top: 1rem;
@@ -214,10 +215,22 @@ button{
     padding-bottom: 4rem;
     h1 {
         color: #f89b1c;
+        font-weight: 400;
+        font-size: 70px;
+        @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-height : 896px) {
+            font-size: 40px;
+        }
     }
-    p {
+    p{
         color: #b64e33;
+        padding-top: 1rem;
+        font-weight: 400;
+        font-size: 30px;
     }
+    
+
 }
 
 .signup {
