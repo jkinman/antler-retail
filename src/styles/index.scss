@@ -119,7 +119,6 @@ button{
 }
 
 .quotes-section {
-    padding-top:6rem;
     min-height: 700px;
     width: 100vw;
     height: 100%;
@@ -127,6 +126,7 @@ button{
     @media only screen 
     and (min-device-width : 375px) 
     and (max-device-height : 896px) {
+        padding-top:6rem;
         height: 100%;
     }
 
