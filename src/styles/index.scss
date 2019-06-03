@@ -96,6 +96,10 @@ button{
     min-width: 70vw;
     width: 75vw;
 }
+.herotop{
+    position: relative;
+    top: 3rem;
+}
 .top-section {
     min-height: 900px;
     // height: 900px;
@@ -158,7 +162,8 @@ button{
 }
 
 .magazine{
-    padding-top: 5rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
     h1 {
         font-weight: 300;
     }
