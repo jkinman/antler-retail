@@ -2,10 +2,16 @@ require('./styles/index.scss');
 
 import PopperJs from 'popper.js';
 import jquery from 'jquery';
+import bootstrap from 'bootstrap';
 
 
 jquery(()=>{
-    console.log('Hello jQuery + bootstrap 4!');
+
+  jquery('.carousel').carousel({
+    interval: 4000
+  })
+
+  console.log('Hello jQuery + bootstrap 4!');
     function submitEmail() {
         let email = document.getElementById('email_field').value
         let data = {
