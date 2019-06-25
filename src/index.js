@@ -5,10 +5,24 @@ import jquery from 'jquery';
 import bootstrap from 'bootstrap';
 
 
-jquery(()=>{
+jquery(($)=>{
+  $ = jquery
 
   jquery('.carousel').carousel({
     interval: 4000
+  })
+
+  jquery(document).ready( () => {
+    console.log(document.getElementById('age-verify').style)
+    document.getElementById('age-verify').style.display = "block"
+
+    if( localStorage.getItem('agechecked') ){
+      document.getElementById('age-verify').style.display = "none"
+    }
+    else{
+      document.getElementById('age-verify').style.display = "block"
+    }
+
   })
 
   console.log('Hello jQuery + bootstrap 4!');

@@ -104,6 +104,15 @@
                     <img onclick="submitEmail()" width="180" class="" src="<%= require('./src/assets/signupbutton.png' ) %>" />
                 </div>
             <!-- </div> -->
+            <div id="age-verify" style="display:none">
+                <img src="<%= require('./src/assets/Antler_Age.png' ) %>" />
+                <div class="buttons">
+                    <a href="#" onclick="hideAgeVerify();">YES</a> |
+                    <a href="//www.ytv.com">NO</a>
+                </div>
+                <!-- <input type="button">yes</input>
+                <input type="button">no</input> -->
+            </div>
         </div>
     </div>
 </div>
@@ -119,6 +128,17 @@
                 <img  width="100" src="<%= require('./src/assets/antlersm.png' ) %>" />
             </div>
             <script type = "text/javascript">
+
+                this.hideAgeVerify = (e) => {
+                    localStorage.setItem('agechecked', true)
+                    document.getElementById('age-verify').style.display = "none"
+                }
+                if( !localStorage.getItem('agechecked') ){
+                  document.getElementById('age-verify').style.display = "none"
+                }
+                else{
+                    document.getElementById('age-verify').style.display = "block"
+                }
 
                 function submitEmail() {
                  let email = document.getElementById('email_field').value
