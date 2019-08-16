@@ -7,11 +7,12 @@ html, body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: lighter;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
 }
 
 a{
-    color: inherit;
+    color: white;
 }
 
 button{
@@ -38,6 +39,12 @@ button{
 .no-padding {
     padding-left: 0;
     padding-right: 0;
+}
+
+.fullpage-signup {
+    img{
+        max-width: 80vw;
+    }
 }
 .topnav {
     color: #d9b81e;
@@ -261,23 +268,31 @@ button{
 }
 
 .signup {
-    min-width: 375px;
+    // min-width: 375px;
     border: black solid 2px;
     display: flex;
     flex-direction: row;
-
+    a{
+        font-size: 2rem;
+        font-weight: bolder;
+        &:hover{
+            color: aliceblue;
+        }
+    }
     @media only screen 
     and (min-device-width : 375px) 
     and (max-device-height : 896px) {
         flex-direction: column;
-        min-width: 300px;    
+        // min-width: 300px;    
     }
         justify-content: center;
     align-items: center;
     .signupform{
         input{
-            background: lightgrey;
+            background: white;
             border: gray solid 1px;
+            width: 50vw;
+            // max-width: ;
         }
         padding: 1rem;
         display: flex;
